@@ -1,0 +1,20 @@
+进入/etc/docker
+
+查看有没有 daemon.json。这是docker默认的配置文件。
+
+如果没有新建，如果有，则修改。
+
+
+[root@zengmg docker]# vi daemon.json
+{
+  "registry-mirrors": ["https://registry.docker-cn.com"，“http://hub-mirror.c.163.com"]
+}
+
+保存退出。
+
+
+重启docker服务
+
+service docker restart
+
+成功！
